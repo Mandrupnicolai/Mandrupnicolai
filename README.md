@@ -1,6 +1,6 @@
 # Hi, I'm Nicolai 👋
 
-##🎓 Education
+## 🎓Education
 
 I hold a Bachelor’s degree in Software Development from Aalborg University, completed in 2023.
 I am currently finishing my Master’s degree in Software Engineering at Aalborg University, with an expected graduation in Summer 2026.
