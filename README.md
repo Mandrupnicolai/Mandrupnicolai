@@ -5,6 +5,11 @@ I'm a Software Engineer based in Denmark, currently finishing my Master's degree
 I care deeply about code quality, architecture, and writing software that is easy to maintain and reason about.
 
 ---
+## 📊 GitHub Stats
+
+![Nicolai's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mandrupnicolai&show_icons=true&theme=default&hide_border=true&count_private=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mandrupnicolai&layout=compact&hide_border=true&theme=default)
+![GitHub Streak](https://streak-stats.demolab.com?user=Mandrupnicolai&theme=default&hide_border=true)
 
 ## 🎓 Education
 
