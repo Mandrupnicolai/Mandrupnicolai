@@ -94,6 +94,40 @@ print(result.metrics.win_rate)       # 0.54
 
 ---
 
+### [springboot-k8s-demo](https://github.com/Mandrupnicolai/springboot-k8s-demo) — Spring Boot REST API on Kubernetes
+
+[![CI/CD](https://github.com/Mandrupnicolai/springboot-k8s-demo/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Mandrupnicolai/springboot-k8s-demo/actions/workflows/ci-cd.yml)
+[![codecov](https://codecov.io/gh/Mandrupnicolai/springboot-k8s-demo/branch/main/graph/badge.svg)](https://codecov.io/gh/Mandrupnicolai/springboot-k8s-demo)
+[![Java](https://img.shields.io/badge/Java-21-007396?style=flat&logo=openjdk&logoColor=white)](https://adoptium.net)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-6DB33F?style=flat&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-ready-326CE5?style=flat&logo=kubernetes&logoColor=white)](https://kubernetes.io)
+[![Helm](https://img.shields.io/badge/Helm-chart-0F1689?style=flat&logo=helm&logoColor=white)](https://helm.sh)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> A production-grade Spring Boot 3.3 REST API containerised with a distroless Docker image and deployed to Kubernetes via Helm — demonstrating clean Java architecture, cloud-native observability, and a full CI/CD pipeline.
+
+**What's under the hood:**
+
+- **Layered architecture** — controller → service → repository separation with constructor injection throughout; no field injection, no hardcoded values
+- **Zero hardcoded config** — every environment-specific value (DB host, credentials, pool size) is supplied via environment variables, sourced from a Kubernetes `ConfigMap` and `Secret`
+- **Distroless Docker image** — multi-stage build produces a minimal, non-root runtime image with no shell and a reduced attack surface
+- **Helm chart** — fully parameterised chart with `values.yaml` overrides; deploy to any cluster with a single `helm upgrade --install`
+- **Kubernetes-native health** — Spring Actuator liveness and readiness probes wired directly to the K8s deployment, enabling zero-downtime rolling updates
+- **CI/CD pipeline** — GitHub Actions: build → JaCoCo coverage gate (≥ 80%) → Codecov report → multi-arch Docker push to GHCR → Helm lint with dry-run
+- **Flyway migrations** — versioned SQL schema management, safe to run on every deploy
+
+```bash
+# Deploy to any Kubernetes cluster in one command
+helm upgrade --install k8s-demo helm/springboot-k8s-demo \
+  --set image.tag=latest \
+  --set secret.DB_PASSWORD= \
+  --namespace default --wait
+```
+
+→ **[View repository](https://github.com/Mandrupnicolai/springboot-k8s-demo)**
+
+---
+
 ### [Text-to-SQL Natural Language Interface](https://github.com/Mandrupnicolai/text-to-sql-natural-language-interface) — AI-Powered Database Query Tool
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
