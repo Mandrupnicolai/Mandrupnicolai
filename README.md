@@ -49,6 +49,8 @@ I care deeply about code quality, architecture, and writing software that is eas
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
 
 **Tools & Practices**
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
@@ -128,26 +130,25 @@ This project demonstrates my ability to bridge AI tooling with practical data ac
 
 ---
 
-### [Home Network Vulnerability Scanner](https://github.com/Mandrupnicolai/home-network-vulnerability-scanner) — Defensive Security Tool
+### [HomeNet Sentinel](https://github.com/Mandrupnicolai/home-network-vulnerability-scanner) — Defensive Network Security Tool
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+[![CI](https://github.com/Mandrupnicolai/home-network-vulnerability-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/Mandrupnicolai/home-network-vulnerability-scanner/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)](https://github.com/Mandrupnicolai/home-network-vulnerability-scanner/blob/main/main.tf)
 
-> A lightweight, local-only LAN scanner that discovers devices, audits open ports, and generates human-readable risk reports — built for defensive personal use.
+> A defensive LAN scanner that discovers devices, scans TCP ports, grabs service banners, and produces risk-oriented reports in Markdown and JSON — with a clean web UI and full cloud deployment via Terraform.
 
-This project reflects my interest in security-aware software development and systems-level Python.
+**What's under the hood:**
 
-**What it does:**
-
-- **Device discovery** — scans your LAN subnet to enumerate all connected hosts
-- **Port scanning & banner grabbing** — checks common TCP ports and captures service banners where available
-- **Risk-oriented reporting** — outputs Markdown + JSON reports with heuristic risk ratings per host
-- **Web UI** — accessible at `http://127.0.0.1:8080` for a clean scan overview without touching the CLI
-- **Configurable & safe** — supports custom port lists, host limits, timeouts, and subnet overrides; no exploitation attempted
+- **Full-stack Python** — threaded port scanner, banner grabber, and heuristic risk engine backed by a lightweight HTTP server with a browser UI
+- **Infrastructure as Code** — single `terraform apply` provisions an EC2 instance on AWS, security group locked to your IP, IAM least-privilege role, and a systemd service with auto-restart
+- **CI/CD pipeline** — GitHub Actions running Ruff lint, mypy type checking, and pytest across Python 3.11 & 3.12 on every push
+- **74% test coverage** — unit and integration tests covering port parsing, risk scoring, banner grabbing, report generation, and all HTTP API endpoints
+- **Defensive by design** — no exploitation attempted; local-network only; reports require human review
 
 ```bash
-python server.py      # Launch the UI at http://127.0.0.1:8080
-python scanner.py --ports 22,80,443,3306 --subnet 192.168.1.0/24
+terraform apply -var="allowed_cidr=YOUR_IP/32"   # Deploy to AWS in one command
+python server.py                                   # Or run locally at http://127.0.0.1:8080
 ```
 
 → **[View repository](https://github.com/Mandrupnicolai/home-network-vulnerability-scanner)**
