@@ -187,5 +187,6 @@ python server.py                                   # Or run locally at http://12
 I'm currently open to graduate positions and internships in software engineering, backend development, and data-intensive systems.
 
 [![CV](https://img.shields.io/badge/CV-PDF-red?style=flat&logo=adobeacrobatreader&logoColor=white)](https://github.com/Mandrupnicolai/Mandrupnicolai/blob/main/Nicolai_Uhre_Mandrup_CV.pdf)
+[![Portfolio](https://img.shields.io/badge/Portfolio-1C1A17?style=flat&logo=github&logoColor=white)](https://mandrupnicolai.github.io/portfolio)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nicolai-uhre-mandrup-526288220/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:nicolai.uhre.com@gmail.com)
