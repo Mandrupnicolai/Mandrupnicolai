@@ -1,6 +1,6 @@
 # Hi, I'm Nicolai 👋
 
-I'm a Software Engineer based in Denmark, currently finishing my Master's degree in Software Engineering at Aalborg University. I build clean, well-tested, production-grade software — with a particular focus on Python backend systems and data-driven applications.
+I'm a Software Engineer based in Denmark, finished my Bachelors's degree in Software Engineering at Aalborg University in 2024. I build clean, well-tested, production-grade software — with a particular focus on Python backend systems and data-driven applications.
 
 I care deeply about code quality, architecture, and writing software that is easy to maintain and reason about.
 
@@ -10,8 +10,7 @@ I care deeply about code quality, architecture, and writing software that is eas
 
 | Degree | Institution | Year |
 |--------|------------|------|
-| MSc Software Engineering *(in progress)* | Aalborg University | Expected 2026 |
-| BSc Software Development | Aalborg University | 2023 |
+| BSc Software Development | Aalborg University | 2024 |
 
 ---
 
